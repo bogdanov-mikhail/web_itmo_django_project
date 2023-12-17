@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+{% include "header.html" %}
+<div id="main">
+    <div id="div__feedback_block">
+        <div>
+            Обратная связь
+        </div>
+        <form id="feedback_form" action="http://localhost:8000/feedback" method="post" target="_self">
+            <div class="input_box">
+                 <input type="text" name="name" placeholder="Ваше имя" required="required"/>
+            </div>
+            <div class="input_box">
+                 <input type="text" name="surname" placeholder="Ваше фамилия" required="required"/>
+            </div>
+            <div class="input_box">
+                 <input type="email" name="email" placeholder="Ваше почта" required="required"/>
+            </div>
+            <div class="input_box">
+                <textarea name="message" placeholder="Что вы хотите предложить?" required="required"></textarea>
+            </div>
+            <div class="input_box">
+                <input type="submit" class="button" value="Отправить" />
+            </div>
+            {% csrf_token %}
+        </form>
+
+    </div>
+</div>
+{% include "footer.html"  %}
+</body>
+</html>

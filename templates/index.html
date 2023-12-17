@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+{% include "header.html"  %}
+<div id="main">
+    <div id="div__info_block">
+        <div class="info_block">
+            <div>Кто мы?</div>
+            <div>
+                Мы большая команда профессиональных православных разработчиков
+            </div>
+        </div>
+        <div class="info_block">
+            <div>Что мы делаем?</div>
+            <div>
+                Создаем очень сложные и нереально большие системы, начиная с миксера и заканчивая МКС
+            </div>
+        </div>
+        <div class="info_block">
+            <div>Зачем мы это делаем?</div>
+            <div>
+                Потому что мы можем!
+            </div>
+        </div>
+    </div>
+</div>
+{% include "footer.html"  %}
+</body>
+</html>
